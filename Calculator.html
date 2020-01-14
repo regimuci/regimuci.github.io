@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IP Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 style="color: red;text-align: center">IP Calculator(IPv4)</h1>
+
+    <h2 style="color: chocolate">Find IP Details</h2>
+
+    <div style="color: darkblue">
+        Enter IP Here:
+        <div class="thisdiv">
+            <input type="number" id="first" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="second" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="third" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="fourth" class="inp" oninput="maxLengthCheck(this)" maxlength="3">
+            /
+            <input type="number" id="cidr" class="inp" oninput="maxLengthCheck(this)" maxlength="2">
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <button onclick="findIpDetails()">Show IP Details</button>
+    </div>
+    <br>
+    <div id="output"></div>
+
+    <h2 style="color: chocolate">Compare IP</h2>
+
+    <div style="color: darkblue">
+        Enter IP1 Here:
+        <div class="thisdiv">
+            <input type="number" id="firstIp1" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="secondIp1" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="thirdIp1" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="fourthIp1" class="inp" oninput="maxLengthCheck(this)" maxlength="3">
+            /
+            <input type="number" id="cidrIp1" class="inp" oninput="maxLengthCheck(this)" maxlength="2">
+        </div>
+    </div>
+
+    <br>
+
+    <div style="color: darkblue">
+        Enter IP2 Here:
+        <div class="thisdiv">
+            <input type="number" id="firstIp2" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="secondIp2" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="thirdIp2" class="inp" oninput="maxLengthCheck(this)" maxlength="3"> .
+            <input type="number" id="fourthIp2" class="inp" oninput="maxLengthCheck(this)" maxlength="3">
+            /
+            <input type="number" id="cidrIp2" class="inp" oninput="maxLengthCheck(this)" maxlength="2">
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <button onclick="compare()">Compare</button>
+    </div>
+    <br>
+    <div id="output2"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
